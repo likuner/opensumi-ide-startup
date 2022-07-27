@@ -40,6 +40,7 @@ import { CommentsModule } from '@opensumi/ide-comments/lib/browser';
 import { ClientAddonModule } from '@opensumi/ide-addons/lib/browser';
 import { TaskModule } from '@opensumi/ide-task/lib/browser';
 import { TestingModule } from '@opensumi/ide-testing/lib/browser';
+import { TodoListModule } from '../../modules/todo/browser/index';
 
 export const CommonBrowserModules: ConstructorOf<BrowserModule>[] = [
   MainLayoutModule,
@@ -84,4 +85,5 @@ export const CommonBrowserModules: ConstructorOf<BrowserModule>[] = [
   TaskModule,
   TestingModule,
   RemoteOpenerModule,
+  TodoListModule,
 ];

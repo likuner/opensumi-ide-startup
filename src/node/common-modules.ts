@@ -11,6 +11,7 @@ import { ExtensionModule } from '@opensumi/ide-extension/lib/node';
 import { OpenVsxExtensionManagerModule } from '@opensumi/ide-extension-manager/lib/node';
 import { FileSchemeNodeModule } from '@opensumi/ide-file-scheme/lib/node';
 import { AddonsModule } from '@opensumi/ide-addons/lib/node';
+import { TodoListModule } from '../../modules/todo/node/index';
 
 export const CommonNodeModules: ConstructorOf<NodeModule>[] = [
   ServerCommonModule,
@@ -25,4 +26,5 @@ export const CommonNodeModules: ConstructorOf<NodeModule>[] = [
   FileSchemeNodeModule,
   AddonsModule,
   OpenerModule,
+  TodoListModule,
 ];
