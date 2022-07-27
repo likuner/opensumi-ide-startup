@@ -16,7 +16,7 @@ export class TodoContribution implements MainLayoutContribution {
     this.mainLayoutService.collectViewComponent(
       {
         component: Todo,
-        collapsed: false,
+        collapsed: true,
         id: 'todo-view',
         name: 'Todo'
       },
