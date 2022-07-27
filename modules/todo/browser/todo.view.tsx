@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { ViewState } from '@opensumi/ide-core-browser';
+import { useInjectable, ViewState } from '@opensumi/ide-core-browser';
 import * as styles from './todo.module.less';
 import { RecycleList, CheckBox } from '@opensumi/ide-components';
+import { ITodoService } from '../common';
 
 export interface ITodo {
   description: string;
@@ -11,6 +12,7 @@ export interface ITodo {
 export const Todo = ({
   viewState
 }: React.PropsWithChildren<{ viewState: ViewState }>) => {
+  const { showMessage } = useInjectable<ITodoService>(ITodoService);
   const { width, height } = viewState;
   const [todos, setTodos] = React.useState<ITodo[]>([
     {
@@ -26,6 +28,7 @@ export const Todo = ({
         description: data.description,
         isChecked: !data.isChecked
       });
+      showMessage(`Set ${data.description} to be ${!data.isChecked}`);
       setTodos(newTodos);
     };
     return (
