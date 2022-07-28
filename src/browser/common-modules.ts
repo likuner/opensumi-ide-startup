@@ -1,3 +1,4 @@
+import { MyMenuModule } from './../../modules/menu/browser/index';
 import { MainLayoutModule } from '@opensumi/ide-main-layout/lib/browser';
 import { MenuBarModule } from '@opensumi/ide-menu-bar/lib/browser';
 import { MonacoModule } from '@opensumi/ide-monaco/lib/browser';
@@ -86,4 +87,5 @@ export const CommonBrowserModules: ConstructorOf<BrowserModule>[] = [
   TestingModule,
   RemoteOpenerModule,
   TodoListModule,
+  MyMenuModule,
 ];
