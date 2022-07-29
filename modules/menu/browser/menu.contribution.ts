@@ -30,7 +30,7 @@ export class MyMenuContribution implements IMenuContribution {
 
     registry.registerMenuItem(testMenuBarId, {
       command: 'editor.saveCurrent', // 'editor.saveCurrent', // 'file.save',
-      group: '1_group',
+      // group: '1_group',
     });
   }
 }
